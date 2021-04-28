@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
+## Runing python parser
+To run the parser we need to get the python 3 program to be able to read the information from the live site and parse it into a json format for the web application consumption.
+
+This python script needs the following packages :
+-bs4:
+pip3 install bs4
+-requests
+pip3 install requests
+-bottle
+pip3 install bottle
+-json
+pip3 install json
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

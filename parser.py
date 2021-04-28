@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import subprocess
 from bottle import run, post, request, response, get, route
 from json import dumps
 
