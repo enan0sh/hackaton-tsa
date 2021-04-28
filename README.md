@@ -3,20 +3,20 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
 ## Runing python parser
-To run the parser we need to get the python 3 program to be able to read the information from the live site and parse it into a json format for the web application consumption.
+To run the parser we need to get the python 3 program to be able to read the information from the live site and parse it into a json format for the web application consumption.<br />
 
-This python script needs the following packages :
--bs4:
-pip3 install bs4
--requests
-pip3 install requests
--bottle
-pip3 install bottle
--json
-pip3 install json
+This python script needs the following packages :<br />
+-bs4:<br />
+pip3 install bs4<br />
+-requests<br />
+pip3 install requests<br />
+-bottle<br />
+pip3 install bottle<br />
+-json<br />
+pip3 install json<br />
 
 
-To run the python script it needs to be a command from the terminal as so:
+To run the python script it needs to be a command from the terminal as so:<br />
 python3 parser.py
 
 ## Development server
