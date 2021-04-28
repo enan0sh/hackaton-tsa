@@ -10,9 +10,12 @@ export class FlightdataComponent implements OnInit {
   @Input() flight: any;
 
   //TODO service
-  constructor() { }
+  constructor() { 
+  }
+
 
   ngOnInit(): void {
+
   }
 
 }

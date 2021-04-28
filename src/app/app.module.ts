@@ -8,9 +8,8 @@ import { FlightdataListComponent } from './flightdata-list/flightdata-list.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatGridListModule } from '@angular/material/grid-list'
-import { MatCardModule } from '@angular/material/card';
 import { FlightdataComponent } from './flightdata/flightdata.component'
+import { NgxChartsModule } from "@swimlane/ngx-charts";
 
 @NgModule({
   declarations: [
@@ -24,9 +23,8 @@ import { FlightdataComponent } from './flightdata/flightdata.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatGridListModule,
-    MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

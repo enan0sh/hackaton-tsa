@@ -1,7 +1,15 @@
 <div class="grid">
-    <ul>
-        <li *ngFor="let flight of flights">
-            <app-flightdata [flight]="flight"></app-flightdata>
-        </li>
-    </ul>
+    <ngx-charts-bar-vertical
+        [view]="view"
+        [results]="flights"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+    >
+    </ngx-charts-bar-vertical>
 </div>

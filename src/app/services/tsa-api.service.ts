@@ -6,12 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TsaAPIService {
 
-  API_KEY = '1';
+  // API_KEY = '1';
 
   constructor(private httpClient: HttpClient) { }
 
   public getTSACheckpoint() {
-    return this.httpClient.get(`https://jsonplaceholder.typicode.com/todos/${this.API_KEY}`);
+    return this.httpClient.get('http://localhost:8080/parser');
   }
 
 }

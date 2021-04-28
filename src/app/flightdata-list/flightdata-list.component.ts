@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { TsaAPIService } from '../services/tsa-api.service';
+import { NgxChartsModule } from '@swimlane/ngx-charts'
+
 
 @Component({
   selector: 'app-flightdata-list',
@@ -6,18 +9,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flightdata-list.component.css']
 })
 export class FlightdataListComponent implements OnInit {
+  
+  constructor(
+    private tsaAPIService: TsaAPIService
+    ) { 
+    }
+    
+  flights: any;
 
-  constructor() { }
+  view: any[] = [700, 400];
 
-  flights: [Object];
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = "Time";
+  showYAxisLabel = true;
+  yAxisLabel = "Flights";
+
+  // colorScheme = {
+  //   domain: ["#5AA454", "#A10A28", "#C7B42C", "#AAAAAA"]
+  // };
 
   ngOnInit(): void {
-    this.flights = [
-      {
-        name: 'Dummy',
-        description: 'Some description'
+    // this.flights = [];
+
+    this.tsaAPIService.getTSACheckpoint().subscribe(
+      res => {
+        console.log(res)
+        this.flights = res
       }
-    ];
+    )
   }
 
 }
