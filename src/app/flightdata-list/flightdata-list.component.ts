@@ -22,12 +22,16 @@ export class FlightdataListComponent implements OnInit {
   // options
   showXAxis = true;
   showYAxis = true;
-  gradient = false;
+  gradient = true;
   showLegend = true;
   showXAxisLabel = true;
   xAxisLabel = "Time";
   showYAxisLabel = true;
   yAxisLabel = "Flights";
+  timeline: boolean = true;
+  legend: boolean = true;
+  xAxis: boolean = true;
+  yAxis: boolean = true;
 
   // colorScheme = {
   //   domain: ["#5AA454", "#A10A28", "#C7B42C", "#AAAAAA"]
@@ -42,6 +46,23 @@ export class FlightdataListComponent implements OnInit {
         this.flights = res
       }
     )
+  }
+  legendTitle: string = 'Days';
+
+  colorScheme = {
+    domain: ['#5AA454', '#C7B42C', '#AAAAAA']
+  };
+
+ onSelect(data): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivate(data): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
 }
